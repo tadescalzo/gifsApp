@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
 * {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -10,4 +11,55 @@ input {
   border-radius: 5px;
   font-size: 1.5rem;
   width: 100%;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  flex: 1 0 25%;
+  background-color: #f4f4f4;
+  border: 1px solid #333;
+  border-radius: 1rem;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.card p {
+  color: #333;
+  font-family: "Roboto";
+  font-weight: 700;
+  text-align: center;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(68, 68, 68);
+  border-color: rgb(65, 65, 65) transparent rgb(71, 71, 71) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
