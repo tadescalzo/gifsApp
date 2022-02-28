@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { AddCategory } from "./components/addCategory";
+import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
-  const [cats, setCats] = useState(["Dragon Ball", "Pokemon", "Digimon"]);
-  const handleAdd = () => {
-    setCats((cats) => [...cats, "Naruto"]);
-  };
+  const [cats, setCats] = useState(["Dragon Ball"]);
+
   return (
     <>
       <h2>Version 6</h2>
       <hr />
-      <button onClick={handleAdd}>Agregar item</button>
+      <AddCategory setCats={setCats} />
       <ol>
-        {cats.map((el) => {
-          return <li key={el}>{el}</li>;
-        })}
+        {cats.map((el) => (
+          <GifGrid key={el} cat={el} />
+        ))}
       </ol>
-      <AddCategory />
     </>
   );
 };
